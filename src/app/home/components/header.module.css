@@ -1,0 +1,48 @@
+.hero {
+	color: white;
+	padding: 12em 0;
+	background: var(--space-cadet);
+}
+
+@supports (background-blend-mode: multiply) {
+	.hero {
+		background: url(/hero-banner.webp),
+			linear-gradient(135deg, var(--aero), var(--bright-pink-crayola));
+		background-attachment: fixed;
+		background-blend-mode: multiply;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.heroContent {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+}
+
+.heroTitle {
+	font-size: 2em;
+	font-size: clamp(2em, 5vw + 1rem, 5rem);
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.heroSubTitle {
+	font-size: 1.5em;
+	font-size: clamp(1.5em, 5vw + 1rem, 3rem);
+	line-height: 1.2;
+}
+
+.heroQuote {
+	font-size: 1.2em;
+	font-size: clamp(1.2em, 5vw + 1rem, 2.2rem);
+	line-height: 1.2;
+	text-align: right;
+}
+
+.ctaButton {
+	margin: auto;
+}
