@@ -42,14 +42,16 @@
 
 
 :root[data-theme="light"] {
-  --color-primary: var(--aero);
-  --color-accent: var(--rusty-red-300);
+  --color-primary: var(--rusty-red);
+  --color-accent: var(--aero);
 
   --color-fg: var(--black);
   --color-fg-alt: var(--white);
 
-  --color-bg-1: var(--aero-200);
-  --color-bg-2: var(--rusty-red-200);
+  --color-bg-1: var(--aero-50);
+  --color-bg-1-alt: var(--space-cadet);
+  --color-bg-2: var(--rusty-red-50);
+  --color-bg-2-alt: var(--rusty-red-900);
 }
 
 :root[data-theme="dark"] {
@@ -60,7 +62,9 @@
   --color-fg-alt: var(--black);
 
   --color-bg-1: var(--space-cadet);
-  --color-bg-2: var(--rusty-red-800);
+  --color-bg-1-alt: var(--aero-50);
+  --color-bg-2: var(--rusty-red-900);
+  --color-bg-2-alt: var(--rusty-red-50);
 }
 
 *,
@@ -100,14 +104,32 @@ p {
 
 section {
   padding: 7em 0;
+  background-color: var(--color-bg-1);
+}
+
+section:nth-child(odd) {
+  background-color: var(--color-bg-2);
+}
+
+section h2 {
+  font-size: 1.5em;
+  font-size: clamp(1.5em, 5vw + 1em, 3em);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 1.1em;
+  font-size: clamp(1.1em, 5vw + 1em, 1.5em);
+  line-height: 1.5;
 }
 
 mark {
   background-color: inherit;
   color: inherit;
   background: linear-gradient(to top,
-      var(--rusty-red) 0%,
-      var(--rusty-red) 100%);
+      var(--color-accent) 0%,
+      var(--color-accent) 100%);
   background-repeat: no-repeat;
   background-size: 0% 0.1em;
   background-position: left bottom;
@@ -141,10 +163,10 @@ mark {
 
 /* Button styles */
 .btn {
-  --btn-color: var(--color-fg);
+  --btn-color: var(--white);
   --btn-bg: var(--color-primary);
   --btn-bg-hover: var(--color-accent);
-  --btn-border: var(--color-fg);
+  --btn-border: var(--white);
   --btn-border-hover: var(--color-accent);
 
   color: var(--btn-color);

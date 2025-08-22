@@ -25,20 +25,20 @@
 
 .heroTitle {
 	font-size: 2em;
-	font-size: clamp(2em, 5vw + 1rem, 5rem);
+	font-size: clamp(2em, calc(5vw + 1em), 5em);
 	line-height: 1;
 	text-transform: uppercase;
 }
 
 .heroSubTitle {
 	font-size: 1.5em;
-	font-size: clamp(1.5em, 5vw + 1rem, 3rem);
+	font-size: clamp(1.5em, calc(5vw + 1em), 3em);
 	line-height: 1.2;
 }
 
 .heroQuote {
 	font-size: 1.2em;
-	font-size: clamp(1.2em, 5vw + 1rem, 2.2rem);
+	font-size: clamp(1.2em, calc(5vw + 1em), 2.2em);
 	line-height: 1.2;
 	text-align: right;
 }
