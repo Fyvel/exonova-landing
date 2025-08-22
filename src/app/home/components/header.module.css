@@ -1,13 +1,13 @@
 .hero {
-	color: white;
+	color: var(--white, white);
 	padding: 12em 0;
-	background: var(--space-cadet);
+	background: var(--space-cadet, #333);
 }
 
 @supports (background-blend-mode: multiply) {
 	.hero {
 		background: url(/hero-banner.webp),
-			linear-gradient(135deg, var(--aero), var(--bright-pink-crayola));
+			linear-gradient(135deg, var(--aero), var(--rusty-red-300));
 		background-attachment: fixed;
 		background-blend-mode: multiply;
 		background-position: top center;
