@@ -21,7 +21,7 @@
 .card {
 	background-color: var(--color-bg-1-alt);
 	color: var(--color-fg-alt);
-	padding: 1rem;
+	padding: 2em 1em;
 	border-radius: 8px;
 	display: flex;
 	gap: 1em;

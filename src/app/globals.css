@@ -118,6 +118,13 @@ section h2 {
   text-transform: uppercase;
 }
 
+section h3 {
+  font-size: 1.3em;
+  font-size: clamp(1.3em, 5vw + 1em, 2.5em);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 section p {
   font-size: 1.1em;
   font-size: clamp(1.1em, 5vw + 1em, 1.5em);
