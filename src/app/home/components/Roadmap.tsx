@@ -1,15 +1,47 @@
+import styles from './roadmap.module.css';
 export default function Roadmap() {
   return (
-    <section>
-      <h2>Our Vision</h2>
-      <div>
-        <h4>Phase 1</h4>
-        <p>Highly accurate diagnosis to empower doctors in helping these women</p>
+    <section className={`section`}>
+      <div className={`container spacing`}>
+        <h2>Our Vision</h2>
+        <div className={styles.timeline}>
+          <div className={styles.event}>
+            <div className={styles.marker}>
+              <img className={styles.icon} src="/phase-1.svg" />
+              <h4 className={styles.label}><mark>Diagnosis</mark></h4>
+            </div>
+            <div className={styles.body}>
+              <p className={styles.content}>
+                Highly accurate & rapid diagnosis to empower doctors in helping these women
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.event}>
+            <div className={styles.marker}>
+              <img className={styles.icon} src="/phase-2.svg" />
+              <h4 className={styles.label}><mark>Research & Development</mark></h4>
+            </div>
+            <div className={styles.body}>
+              <p className={styles.content}>
+                Focused on innovative solutions and clinical trials
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.event}>
+            <div className={styles.marker}>
+              <img className={styles.icon} src="/phase-3.svg" />
+              <h4 className={styles.label}><mark>Personalised Treatment</mark></h4>
+            </div>
+            <div className={styles.body}>
+              <p className={styles.content}>
+                Tailored therapies based on individual patient profiles
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Phase 2</h4>
-        <p>Expanded pipeline into personalised treatments</p>
-      </div>
-    </section>
-  );
+    </section >
+  )
 }
