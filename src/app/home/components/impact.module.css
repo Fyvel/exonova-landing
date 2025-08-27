@@ -55,14 +55,13 @@
 	color: var(--color-fg-alt);
 	padding: 2em 1em;
 	border-radius: 8px;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2em;
 }
 
-.tableRow {
+.table-row {
 	width: 100%;
 	display: grid;
 	grid-template-areas:
@@ -72,53 +71,53 @@
 	gap: 1em 0;
 }
 
-.tableRow:first-child {
-	padding: 0 0 2em 0;
+.table-row:first-child {
+	padding: 0 0 2em;
 	border-bottom: 2px solid var(--color-bg-1);
 }
 
-.tableHead {
+.table-head {
 	grid-area: head;
 	text-align: center;
 	color: var(--color-accent);
 }
 
-.tableCell {
+.table-cell {
 	font-weight: 700;
 	padding: 0 1em;
 }
 
-.tableCell:nth-child(even) {
+.table-cell:nth-child(even) {
 	grid-area: left;
 	border-right: 2px solid var(--color-bg-1);
 	text-align: right;
 }
 
-.tableCell:nth-child(odd) {
+.table-cell:nth-child(odd) {
 	grid-area: right;
 	border-left: 2px solid var(--color-bg-1);
 	text-align: left;
 }
 
-.tableCell .highlight {
+.table-cell .highlight {
 	text-decoration: underline var(--color-accent) 4px;
 	text-underline-offset: 4px;
 }
 
-@media (min-width: 900px) {
-	.tableRow {
+@media (width > 900px) {
+	.table-row {
 		grid-template-areas:
 			"head left right";
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
-	.tableHead {
+	.table-head {
 		text-align: left;
 	}
 
-	.tableCell,
-	.tableCell:nth-child(odd),
-	.tableCell:nth-child(even) {
+	.table-cell,
+	.table-cell:nth-child(odd),
+	.table-cell:nth-child(even) {
 		text-align: center;
 	}
 }

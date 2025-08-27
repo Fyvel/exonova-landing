@@ -6,7 +6,7 @@
 
 @supports (background-blend-mode: multiply) {
 	.hero {
-		background: url(/hero-banner.webp),
+		background: url("/hero-banner.webp"),
 			linear-gradient(135deg, var(--aero), var(--rusty-red-300));
 		background-attachment: fixed;
 		background-blend-mode: multiply;
@@ -16,33 +16,33 @@
 	}
 }
 
-.heroContent {
+.hero-content {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	align-items: center;
 }
 
-.heroTitle {
+.hero-title {
 	font-size: 2em;
 	font-size: clamp(2em, calc(5vw + 1em), 5em);
 	line-height: 1;
 	text-transform: uppercase;
 }
 
-.heroSubTitle {
+.hero-sub-title {
 	font-size: 1.5em;
 	font-size: clamp(1.5em, calc(5vw + 1em), 3em);
 	line-height: 1.2;
 }
 
-.heroQuote {
+.hero-quote {
 	font-size: 1.2em;
 	font-size: clamp(1.2em, calc(5vw + 1em), 2.2em);
 	line-height: 1.2;
 	text-align: right;
 }
 
-.ctaButton {
+.cta-button {
 	margin: auto;
 }

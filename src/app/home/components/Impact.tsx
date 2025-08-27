@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './impact.module.css';
 
 export default function Impact() {
@@ -79,7 +80,7 @@ type CardProps = {
 const Card = ({ src, title, items }: CardProps) => (
   <div className={styles.card}>
     <h3 className={styles.title}>{title}</h3>
-    <img className={styles.image} src={src} alt={title} />
+    <Image src={src} alt={title} width={100} height={100} className={styles.image} />
     <ul className={styles.items}>
       {items.map((item, index) => (
         <li key={index} className={styles.item}>{item}</li>
@@ -97,19 +98,19 @@ type TableProps = {
 }
 const Table = ({ columns, rows }: TableProps) => (
   <div className={styles.table}>
-    <div className={styles.tableRow}>
-      <h4 className={styles.tableHead} aria-hidden="true" />
+    <div className={styles["table-row"]}>
+      <h4 className={styles["table-head"]} aria-hidden="true" />
       {columns.map((column, index) => (
-        <h4 key={index} className={styles.tableCell}>
+        <h4 key={index} className={styles["table-cell"]}>
           {index % 2 ? <span className={styles.highlight}>{column}</span> : column}
         </h4>
       ))}
     </div>
     {rows.map((row, index) => (
-      <div key={index} className={styles.tableRow}>
-        <h4 className={styles.tableHead}>{row.header}</h4>
+      <div key={index} className={styles["table-row"]}>
+        <h4 className={styles["table-head"]}>{row.header}</h4>
         {row.cells.map((cell, cellIndex) => (
-          <div key={cellIndex} className={styles.tableCell}>
+          <div key={cellIndex} className={styles["table-cell"]}>
             {cellIndex % 2 ? <span className={styles.highlight}>{cell}</span> : cell}
           </div>
         ))}

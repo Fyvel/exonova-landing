@@ -1,4 +1,5 @@
 import styles from './solution.module.css';
+import Image from 'next/image';
 
 export default function Solution() {
   return (
@@ -36,27 +37,27 @@ export default function Solution() {
         <h3><mark>Enhanced Patient Journey</mark></h3>
         <ol className={styles.journey}>
           <li>
-            <img src="/trigger.svg" alt="Symptoms" />
+            <Image src="/trigger.svg" alt="Icon Symptoms" width={96} height={96} />
             Symptoms
           </li>
           <Arrow />
           <li>
-            <img src="/doctor.svg" alt="GP Visit" />
+            <Image src="/doctor.svg" alt="Icon GP Visit" width={96} height={96} />
             GP Visit
           </li>
           <Arrow />
           <li>
-            <img src="/drop.svg" alt="Sample" />
+            <Image src="/drop.svg" alt="Icon Sample" width={96} height={96} />
             Sample
           </li>
           <Arrow />
           <li>
-            <img src="/bolt.svg" alt="Exonova Test" />
+            <Image src="/bolt.svg" alt="Icon Exonova Test" width={96} height={96} />
             Exonova Test
           </li>
           <Arrow />
           <li>
-            <img src="/decision.svg" alt="Informed Decision" />
+            <Image src="/decision.svg" alt="Icon Informed Decision" width={96} height={96} />
             Informed Decision
           </li>
         </ol>
@@ -71,20 +72,20 @@ type CardProps = {
   src: string;
 }
 const Card = ({ title, description, src }: CardProps) => (
-  <div className={styles.card}>
-    <img className={styles.image} src={src} alt={title} />
+  <li className={styles.card}>
+    <Image className={styles.image} src={src} alt={title} width={60} height={100} />
     <h3 className={styles.title}>{title}</h3>
     <p className={styles.description}>{description}</p>
-  </div>
+  </li>
 )
 
 function Arrow() {
   return (
-    <div className={styles.wrapper}>
-      <div className={`${styles.arrowSliding}`}>
+    <div className={styles.wrapper} aria-hidden="true">
+      <div className={`${styles["arrow-sliding"]}`}>
         <div className={`${styles.arrow}`}></div>
       </div>
-      <div className={`${styles.arrowSliding} ${styles.delay1}`}>
+      <div className={`${styles["arrow-sliding"]} ${styles.delay1}`}>
         <div className={`${styles.arrow}`}></div>
       </div>
     </div>

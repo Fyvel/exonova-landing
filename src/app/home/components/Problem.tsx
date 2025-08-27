@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './problem.module.css';
 
 export default function Problem() {
@@ -44,9 +45,9 @@ type CardProps = {
   src: string;
 }
 const Card = ({ title, description, src }: CardProps) => (
-  <div className={styles.card}>
-    <img className={styles.image} src={src} alt={title} />
+  <li className={styles.card}>
+    <Image className={styles.image} src={src} alt={title} width={50} height={100} />
     <h3 className={styles.title}>{title}</h3>
     <p className={styles.description}>{description}</p>
-  </div>
+  </li>
 )

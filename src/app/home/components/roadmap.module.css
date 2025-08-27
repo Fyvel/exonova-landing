@@ -1,7 +1,7 @@
 @supports (background-blend-mode: multiply) {
 	.roadmap {
 		color: var(--color-fg-alt);
-		background: url(/woman-bg.webp);
+		background: url("/woman-bg.webp");
 		background-attachment: fixed;
 		background-blend-mode: multiply;
 		background-position: top center;
@@ -23,7 +23,6 @@
 	--tl-circle-border-width: 0.125rem;
 	--tl-vertical-line-x-position: 3rem;
 	--tl-accent: color-mix(in srgb, var(--color-bg-2-alt), var(--color-bg-2));
-
 	--event-bg: var(--color-bg-1-alt);
 	--event-bg-alt: var(--color-bg-1);
 	--event-fg: var(--color-fg-alt);
@@ -104,7 +103,7 @@
 	line-height: 2.5rem;
 }
 
-@media (min-width: 900px) {
+@media (width > 900px) {
 	.event {
 		display: grid;
 		grid-template-columns: 320px 1fr;

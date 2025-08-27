@@ -10,7 +10,7 @@
 		"legal socials";
 }
 
-@media (min-width: 600px) {
+@media (width > 600px) {
 	.wrapper {
 		grid-template-areas:
 			"logo anchors socials legal";
@@ -22,7 +22,7 @@
 	height: fit-content;
 }
 
-.logoLink {
+.logo-link {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

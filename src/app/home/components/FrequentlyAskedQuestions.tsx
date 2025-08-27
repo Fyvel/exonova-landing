@@ -28,17 +28,17 @@ export default function FrequentlyAskedQuestions() {
 		<section className={`section ${styles.faq}`} id="faq">
 			<div className={`container spacing`}>
 				<h2>Frequently Asked Questions</h2>
-				<dl className={`spacing ${styles.accordion}`}>
+				<div className={`spacing ${styles.accordion}`}>
 					{faqs.map((faq) => (
 						<div key={faq.key} className={styles.tab}>
 							<input type="checkbox" id={`faq-${faq.key}`} name={`faq-${faq.key}`} />
 							<label htmlFor={`faq-${faq.key}`} className={styles.label}>
-								<dt><mark>{faq.question}</mark></dt>
+								<div>{faq.question}</div>
 							</label>
-							<dd className={styles.answer}>{faq.answer}</dd>
+							<div className={styles.answer}>{faq.answer}</div>
 						</div>
 					))}
-				</dl>
+				</div>
 			</div>
 		</section>
 	)

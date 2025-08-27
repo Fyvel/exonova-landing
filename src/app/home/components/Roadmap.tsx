@@ -1,4 +1,26 @@
 import styles from './roadmap.module.css';
+import Image from 'next/image';
+
+const events = [
+  {
+    phase: 1,
+    title: "Diagnosis",
+    description: "Highly accurate & rapid diagnosis to empower doctors in helping these women",
+    icon: "/phase-1.svg"
+  },
+  {
+    phase: 2,
+    title: "Research & Development",
+    description: "Focused on innovative solutions and clinical trials",
+    icon: "/phase-2.svg"
+  },
+  {
+    phase: 3,
+    title: "Personalised Treatment",
+    description: "Tailored therapies based on individual patient profiles",
+    icon: "/phase-3.svg"
+  }
+]
 
 export default function Roadmap() {
   return (
@@ -6,41 +28,19 @@ export default function Roadmap() {
       <div className={`container spacing`}>
         <h2>Our Vision</h2>
         <div className={styles.timeline}>
-          <div className={styles.event}>
-            <div className={styles.marker}>
-              <img className={styles.icon} src="/phase-1.svg" />
-              <h4 className={styles.label}><mark>Diagnosis</mark></h4>
+          {events.map(event => (
+            <div className={styles.event} key={event.phase}>
+              <div className={styles.marker}>
+                <Image className={styles.icon} src={event.icon} width={40} height={40} alt={event.title} />
+                <h3 className={styles.label}><mark>{event.title}</mark></h3>
+              </div>
+              <div className={styles.body}>
+                <p className={styles.content}>
+                  {event.description}
+                </p>
+              </div>
             </div>
-            <div className={styles.body}>
-              <p className={styles.content}>
-                Highly accurate & rapid diagnosis to empower doctors in helping these women
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.event}>
-            <div className={styles.marker}>
-              <img className={styles.icon} src="/phase-2.svg" />
-              <h4 className={styles.label}><mark>Research & Development</mark></h4>
-            </div>
-            <div className={styles.body}>
-              <p className={styles.content}>
-                Focused on innovative solutions and clinical trials
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.event}>
-            <div className={styles.marker}>
-              <img className={styles.icon} src="/phase-3.svg" />
-              <h4 className={styles.label}><mark>Personalised Treatment</mark></h4>
-            </div>
-            <div className={styles.body}>
-              <p className={styles.content}>
-                Tailored therapies based on individual patient profiles
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section >

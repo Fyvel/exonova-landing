@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./footer.module.css"
 
 const anchors = [
@@ -16,14 +17,14 @@ export default function Footer() {
         <div className={styles.wrapper}>
           <div className={styles.branding}>
 
-            <a href="#" className={styles.logoLink}>
-              <img src="/logo.svg" alt="Exonova Logo" className={styles.logo} />
+            <a href="#" className={styles["logo-link"]}>
+              <Image src="/logo.svg" alt="Exonova Logo" width={80} height={80} className={styles.logo} />
               EXONOVA Biotech
             </a>
           </div>
 
           <div className={styles.anchors}>
-            <h4>Quick Links</h4>
+            <h3>Quick Links</h3>
             {anchors.map((anchor) => (
               <a key={anchor.label} href={anchor.href} className={styles.anchor}>
                 {anchor.label}
@@ -32,7 +33,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.socials}>
-            <h4>Reach Out</h4>
+            <h3>Reach Out</h3>
             <a href="https://www.linkedin.com/company/exonova-biotech/" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
@@ -42,7 +43,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.legal}>
-            <h4>Legal</h4>
+            <h3>Legal</h3>
             <a href="" target="_blank" rel="noopener noreferrer">
               Terms and Conditions
             </a>

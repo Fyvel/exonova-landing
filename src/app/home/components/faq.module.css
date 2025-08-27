@@ -1,5 +1,5 @@
 /* Component-scoped tokens */
-:root {
+.faq {
 	--faq-padding: 1rem;
 	--faq-border-radius: 0.5rem;
 	--faq-transition-duration: 0.35s;
@@ -16,7 +16,7 @@
 @supports (background-blend-mode: multiply) {
 	.faq {
 		color: var(--color-fg-alt);
-		background: url(/woman-bg.webp);
+		background: url("/woman-bg.webp");
 		background-attachment: fixed;
 		background-blend-mode: multiply;
 		background-position: top center;

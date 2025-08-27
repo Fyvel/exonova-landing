@@ -7,7 +7,7 @@
 @supports (background-blend-mode: multiply) {
 	.solution {
 		color: var(--white);
-		background: url(/hero-banner.webp),
+		background: url("/hero-banner.webp"),
 			linear-gradient(135deg, var(--rusty-red-300), var(--aero));
 		background-attachment: fixed;
 		background-blend-mode: multiply;
@@ -66,7 +66,6 @@
 	list-style: none;
 	padding: 2em 1em;
 	justify-self: center;
-
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -78,7 +77,6 @@
 	flex-direction: column;
 	align-items: center;
 	font-weight: 700;
-	;
 }
 
 .journey li img {
@@ -86,12 +84,11 @@
 	padding: 1em;
 	height: 6em;
 	width: 6em;
-
 	background-color: color-mix(in srgb, var(--color-bg-2-alt), var(--color-bg-2));
 	color: var(--white);
 }
 
-@media (min-width: 900px) {
+@media (width> 900px) {
 	.journey {
 		width: 100%;
 		flex-direction: row;
@@ -111,7 +108,7 @@
 	transform: rotate(180deg);
 }
 
-@media (min-width: 900px) {
+@media (width > 900px) {
 	.wrapper {
 		transform: rotate(90deg);
 	}
@@ -126,7 +123,7 @@
 	transform: rotate(45deg);
 }
 
-.arrowSliding {
+.arrow-sliding {
 	position: absolute;
 	animation: slide 1.8s linear infinite;
 }

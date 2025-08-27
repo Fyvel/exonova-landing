@@ -6,7 +6,7 @@
 
 @supports (background-blend-mode: multiply) {
 	.contact {
-		background: url(/contact-us.webp),
+		background: url("/contact-us.webp"),
 			linear-gradient(135deg, var(--aero), var(--rusty-red-300));
 		background-attachment: fixed;
 		background-blend-mode: multiply;
