@@ -101,7 +101,7 @@ const Table = ({ columns, rows }: TableProps) => (
       <h4 className={styles.tableHead} aria-hidden="true" />
       {columns.map((column, index) => (
         <h4 key={index} className={styles.tableCell}>
-          {index % 2 ? <mark>{column}</mark> : column}
+          {index % 2 ? <span className={styles.highlight}>{column}</span> : column}
         </h4>
       ))}
     </div>
@@ -110,7 +110,7 @@ const Table = ({ columns, rows }: TableProps) => (
         <h4 className={styles.tableHead}>{row.header}</h4>
         {row.cells.map((cell, cellIndex) => (
           <div key={cellIndex} className={styles.tableCell}>
-            {cellIndex % 2 ? <mark>{cell}</mark> : cell}
+            {cellIndex % 2 ? <span className={styles.highlight}>{cell}</span> : cell}
           </div>
         ))}
       </div>

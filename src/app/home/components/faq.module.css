@@ -15,7 +15,7 @@
 /* Background styling */
 @supports (background-blend-mode: multiply) {
 	.faq {
-		color: var(--white);
+		color: var(--color-fg-alt);
 		background: url(/woman-bg.webp);
 		background-attachment: fixed;
 		background-blend-mode: multiply;
