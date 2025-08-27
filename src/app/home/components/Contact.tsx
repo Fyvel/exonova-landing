@@ -1,15 +1,16 @@
+import styles from "./contact.module.css"
+
 export default function Contact() {
   return (
-    <section>
-      <h2>Get in touch</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec libero tincidunt, a tincidunt libero tincidunt.
-      </p>
-
-      <div>
-        <h4>Contact us</h4>
-        <p>For clinicians, researchers, and investors ready to make a difference</p>
-        <button>Get in Touch</button>
+    <section className={`section ${styles.contact}`}>
+      <div className={`container spacing`}>
+        <h2>Get in touch</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec libero tincidunt, a tincidunt libero tincidunt.
+        </p>
+        <a href="mailto:contact@exonova.com" className={`btn ${styles.cta}`}>
+          Get in touch
+        </a>
       </div>
     </section>
   )
