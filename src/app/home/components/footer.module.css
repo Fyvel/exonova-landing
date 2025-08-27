@@ -1,0 +1,100 @@
+.footer {
+	padding: 5rem 0;
+}
+
+.wrapper {
+	display: grid;
+	gap: 1rem;
+	grid-template-areas:
+		"logo anchors"
+		"legal socials";
+}
+
+@media (min-width: 600px) {
+	.wrapper {
+		grid-template-areas:
+			"logo anchors socials legal";
+	}
+}
+
+.branding {
+	display: inline-flex;
+	height: fit-content;
+}
+
+.logoLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-area: logo;
+	font-weight: 700;
+}
+
+.logo {
+	width: 5em;
+	height: auto;
+}
+
+.anchors,
+.socials,
+.legal {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.anchors {
+	grid-area: anchors;
+}
+
+.socials {
+	grid-area: socials;
+}
+
+.legal {
+	grid-area: legal;
+}
+
+.copyright {
+	text-align: center;
+	padding: 3rem 0;
+	border-top: 3px solid var(--color-primary);
+}
+
+.footer h4 {
+	font-size: 1.1em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.footer a {
+	font-size: 1.1em;
+	text-decoration: none;
+	color: var(--color-fg);
+}
+
+.footer a:hover {
+	background: linear-gradient(to top,
+			var(--color-primary) 0%,
+			var(--color-primary) 100%);
+	background-repeat: no-repeat;
+	background-size: 0% 0.1rem;
+	background-position: left bottom;
+	animation: underline-slide .2s forwards;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes underline-slide {
+	0% {
+		background-size: 0% 0.1em;
+	}
+
+	80% {
+		background-size: 100% 0.1em;
+	}
+
+	100% {
+		background-size: 100% .3em;
+	}
+}

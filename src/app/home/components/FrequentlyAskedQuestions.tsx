@@ -25,7 +25,7 @@ const faqs = [
 
 export default function FrequentlyAskedQuestions() {
 	return (
-		<section className={`section ${styles.faq}`}>
+		<section className={`section ${styles.faq}`} id="faq">
 			<div className={`container spacing`}>
 				<h2>Frequently Asked Questions</h2>
 				<dl className={`spacing ${styles.accordion}`}>

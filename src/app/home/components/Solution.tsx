@@ -2,7 +2,7 @@ import styles from './solution.module.css';
 
 export default function Solution() {
   return (
-    <section className={`section ${styles.solution}`}>
+    <section className={`section ${styles.solution}`} id="solution">
       <div className={`container spacing`}>
         <div className={`spacing`}>
           <h2>A New Era in Endometriosis Diagnosis</h2>

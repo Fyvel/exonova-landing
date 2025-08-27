@@ -2,7 +2,7 @@ import styles from './problem.module.css';
 
 export default function Problem() {
   return (
-    <section className={`section`}>
+    <section className={`section`} id="problem">
       <div className={`container spacing`}>
         <div className={`spacing`}>
           <h2>Endometriosis Diagnosis is Broken</h2>

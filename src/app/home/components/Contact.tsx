@@ -2,7 +2,7 @@ import styles from "./contact.module.css"
 
 export default function Contact() {
   return (
-    <section className={`section ${styles.contact}`}>
+    <section className={`section ${styles.contact}`} id="contact">
       <div className={`container spacing`}>
         <h2>Get in touch</h2>
         <p>

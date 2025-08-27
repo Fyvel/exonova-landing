@@ -1,7 +1,8 @@
 import styles from './roadmap.module.css';
+
 export default function Roadmap() {
   return (
-    <section className={`section ${styles.roadmap}`}>
+    <section className={`section ${styles.roadmap}`} id="roadmap">
       <div className={`container spacing`}>
         <h2>Our Vision</h2>
         <div className={styles.timeline}>

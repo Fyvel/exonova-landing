@@ -2,7 +2,7 @@ import styles from "./header.module.css";
 
 export default function Header() {
   return (
-    <header className={styles.hero}>
+    <header className={styles.hero} id="hero">
       <div className={`container ${styles.heroContent}`}>
         <div className={`spacing`}>
           <h1 className={styles.heroTitle}>
