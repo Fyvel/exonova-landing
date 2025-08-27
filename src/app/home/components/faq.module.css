@@ -1,0 +1,106 @@
+/* Component-scoped tokens */
+:root {
+	--faq-padding: 1rem;
+	--faq-border-radius: 0.5rem;
+	--faq-transition-duration: 0.35s;
+	--faq-font-size: clamp(1.1rem, 5vw + 1rem, 1.2rem);
+	--faq-icon-size: 2rem;
+	--faq-max-height: 20rem;
+	--faq-bg: var(--color-bg-1-alt);
+	--faq-bg-alt: var(--color-bg-1);
+	--faq-fg: var(--color-fg-alt);
+	--faq-fg-alt: var(--color-fg);
+}
+
+/* Background styling */
+@supports (background-blend-mode: multiply) {
+	.faq {
+		color: var(--white);
+		background: url(/woman-bg.webp);
+		background-attachment: fixed;
+		background-blend-mode: multiply;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+/* Core: structure and transitions */
+.tab {
+	position: relative;
+}
+
+.tab input {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+
+.tab .answer {
+	padding: 0 var(--faq-padding);
+	max-height: 0;
+	overflow: hidden;
+	transition: all var(--faq-transition-duration) ease;
+	background: var(--faq-bg);
+	color: var(--faq-fg);
+	border-radius: 0 0 var(--faq-border-radius) var(--faq-border-radius);
+}
+
+.tab input:checked~.answer {
+	padding: var(--faq-padding);
+	max-height: var(--faq-max-height);
+}
+
+/* Visuals */
+.accordion {
+	overflow: hidden;
+}
+
+.tab .label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--faq-fg-alt);
+	background: var(--faq-bg-alt);
+	cursor: pointer;
+	padding: var(--faq-padding);
+	border-radius: var(--faq-border-radius);
+	font-size: var(--faq-font-size);
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.tab .label::after {
+	content: "＋";
+	width: var(--faq-icon-size);
+	height: var(--faq-icon-size);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center;
+	text-align: center;
+	transition: transform var(--faq-transition-duration) ease;
+	align-self: center;
+	font-size: var(--faq-icon-size);
+}
+
+.tab input:checked+.label {
+	border-radius: var(--faq-border-radius) var(--faq-border-radius) 0 0;
+}
+
+.tab input:checked+.label::after {
+	transform: rotate(-180deg);
+	content: "−";
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.tab .answer {
+		transition: none;
+	}
+
+	.tab .label::after {
+		transition: none;
+	}
+}
