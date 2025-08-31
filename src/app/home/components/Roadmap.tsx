@@ -24,7 +24,7 @@ const events = [
 
 export default function Roadmap() {
   return (
-    <section className={`section ${styles.roadmap}`} id="roadmap">
+    <section className={`parallax-section ${styles.roadmap}`} id="roadmap">
       <div className={`container spacing`}>
         <h2>Our Vision</h2>
         <div className={styles.timeline}>

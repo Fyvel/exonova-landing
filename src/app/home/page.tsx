@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="parallax-container">
       <Header />
       <Problem />
       <Solution />
@@ -18,6 +18,6 @@ export default function Home() {
       <FrequentlyAskedQuestions />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }

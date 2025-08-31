@@ -12,7 +12,7 @@ const anchors = [
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="parallax-section">
       <div className={`container spacing ${styles.footer}`}>
         <div className={styles.wrapper}>
           <div className={styles.branding}>

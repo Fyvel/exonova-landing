@@ -1,20 +1,7 @@
 .solution {
-	color: var(--white);
-	padding: 12em 0;
-	background: var(--color-bg-1);
-}
-
-@supports (background-blend-mode: multiply) {
-	.solution {
-		color: var(--white);
-		background: url("/hero-banner.webp"),
-			linear-gradient(135deg, var(--rusty-red-300), var(--aero));
-		background-attachment: fixed;
-		background-blend-mode: multiply;
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+	padding: 12em 0 4em;
+	background-color: var(--color-bg-1-alt);
+	color: var(--color-fg-alt);
 }
 
 .list {
@@ -29,8 +16,8 @@
 
 .card {
 	flex: 1 1 300px;
-	background-color: var(--color-bg-1-alt);
-	color: var(--color-fg-alt);
+	background-color: var(--color-bg-1);
+	color: var(--color-fg);
 	padding: 2em 1em;
 	border-radius: 8px;
 	display: flex;
@@ -59,9 +46,15 @@
 	color: var(--white);
 }
 
+.journey-wrapper {
+	color: var(--color-fg, white);
+	background-color: var(--color-bg-2, #333);
+
+}
+
 .journey {
-	background-color: var(--color-bg-2);
-	color: var(--color-fg);
+	background-color: var(--color-bg-2-alt);
+	color: var(--color-fg-alt);
 	border-radius: 8px;
 	list-style: none;
 	padding: 2em 1em;

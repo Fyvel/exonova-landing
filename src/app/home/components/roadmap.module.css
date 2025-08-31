@@ -1,13 +1,6 @@
-@supports (background-blend-mode: multiply) {
-	.roadmap {
-		color: var(--color-fg-alt);
-		background: url("/woman-bg.webp");
-		background-attachment: fixed;
-		background-blend-mode: multiply;
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+.roadmap {
+	background-color: var(--color-bg-1);
+	color: var(--color-fg);
 }
 
 .timeline {

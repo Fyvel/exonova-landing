@@ -3,7 +3,7 @@ import styles from './problem.module.css';
 
 export default function Problem() {
   return (
-    <section className={`section`} id="problem">
+    <section className={`parallax-section ${styles.problem}`} id="problem">
       <div className={`container spacing`}>
         <div className={`spacing`}>
           <h2>Endometriosis Diagnosis is Broken</h2>

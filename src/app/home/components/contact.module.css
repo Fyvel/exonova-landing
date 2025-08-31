@@ -1,19 +1,6 @@
 .contact {
 	color: var(--white, white);
 	padding: 12em 0;
-	background: var(--space-cadet, #333);
-}
-
-@supports (background-blend-mode: multiply) {
-	.contact {
-		background: url("/contact-us.webp"),
-			linear-gradient(135deg, var(--aero), var(--rusty-red-300));
-		background-attachment: fixed;
-		background-blend-mode: multiply;
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
 }
 
 .contact div {

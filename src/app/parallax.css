@@ -1,0 +1,50 @@
+.parallax {
+	position: relative;
+	z-index: 0;
+}
+
+.parallax-container {
+	position: relative;
+	z-index: 0;
+}
+
+div.parallax-image {
+	background-blend-mode: multiply;
+	background-position: top center;
+	-webkit-background-size: cover;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-moz-background-size: cover;
+	background-size: cover;
+	top: 0;
+}
+
+.parallax-sticky {
+	margin-top: -100vh;
+	width: 100vw;
+	height: 100vh;
+	/* stylelint-disable-next-line value-no-vendor-prefix */
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 0;
+}
+
+.parallax-section {
+	position: relative;
+	z-index: 1;
+}
+
+div.parallax-image-hero {
+	background-image: url("/hero-banner.webp"),
+		linear-gradient(135deg, var(--aero), var(--rusty-red-300));
+}
+
+div.parallax-image-impact {
+	background-image: url("/woman-bg.webp"),
+		linear-gradient(135deg, var(--rusty-red-100), var(--rusty-red-100));
+}
+
+div.parallax-image-contact {
+	background-image: url("/contact-us.webp"),
+		linear-gradient(135deg, var(--aero), var(--rusty-red-300));
+}

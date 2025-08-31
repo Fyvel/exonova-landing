@@ -6,23 +6,13 @@
 	--faq-font-size: clamp(1.1rem, 5vw + 1rem, 1.2rem);
 	--faq-icon-size: 2rem;
 	--faq-max-height: 20rem;
-	--faq-bg: var(--color-bg-1-alt);
-	--faq-bg-alt: var(--color-bg-1);
+	--faq-bg: var(--color-bg-2-alt);
+	--faq-bg-alt: var(--color-bg-2);
 	--faq-fg: var(--color-fg-alt);
 	--faq-fg-alt: var(--color-fg);
-}
 
-/* Background styling */
-@supports (background-blend-mode: multiply) {
-	.faq {
-		color: var(--color-fg-alt);
-		background: url("/woman-bg.webp");
-		background-attachment: fixed;
-		background-blend-mode: multiply;
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+	background-color: var(--color-bg-1-alt);
+	color: var(--color-fg-alt);
 }
 
 /* Core: structure and transitions */

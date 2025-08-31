@@ -3,71 +3,74 @@ import styles from './impact.module.css';
 
 export default function Impact() {
   return (
-    <section className={`section`}>
-      <div className={`container spacing`}>
-        <h2>
-          Better for Women,<br />
-          Smarter for Clinicians &<br />
-          Cheaper for Everyone.
-        </h2>
+    <>
+      <div className={`parallax-image parallax-image-impact parallax-sticky`} />
+      <section className={`parallax-section ${styles.impact}`} id={"impact"}>
+        <div className={`container spacing`}>
+          <h2>
+            Better for Women,<br />
+            Smarter for Clinicians &<br />
+            Cheaper for Everyone.
+          </h2>
 
-        <div className={styles.cards}>
-          <Card
-            src="/heart.svg"
-            title="Women"
-            items={[
-              "Shorter diagnostic time",
-              "Fewer unnecessary surgeries",
-              "More informed choices",
-              "Reduced suffering"
-            ]}
-          />
-          <Card
-            src="/medical.svg"
-            title="Clinicians"
-            items={[
-              "Clearer patient triage",
-              "Objective results",
-              "Enhanced decision-making",
-              "Improved patient outcomes"
-            ]}
-          />
-          <Card
-            src="/healthcare.svg"
-            title="Healthcare Systems"
-            items={[
-              "Reduced surgical load",
-              "Optimised resources",
-              "Lower costs",
-              "Better allocation"
+          <div className={styles.cards}>
+            <Card
+              src="/heart.svg"
+              title="Women"
+              items={[
+                "Shorter diagnostic time",
+                "Fewer unnecessary surgeries",
+                "More informed choices",
+                "Reduced suffering"
+              ]}
+            />
+            <Card
+              src="/medical.svg"
+              title="Clinicians"
+              items={[
+                "Clearer patient triage",
+                "Objective results",
+                "Enhanced decision-making",
+                "Improved patient outcomes"
+              ]}
+            />
+            <Card
+              src="/healthcare.svg"
+              title="Healthcare Systems"
+              items={[
+                "Reduced surgical load",
+                "Optimised resources",
+                "Lower costs",
+                "Better allocation"
+              ]}
+            />
+          </div>
+
+          <h3><mark>Current vs. Enhanced Pathway</mark></h3>
+          <Table
+            columns={["Current pathway", "Exonova-enhanced"]}
+            rows={[
+              {
+                header: "Diagnosis Time",
+                cells: ["6 to 12 years", "Weeks"]
+              },
+              {
+                header: "Surgery Rate",
+                cells: ["High", "Reduced"]
+              },
+              {
+                header: "Patient Satisfaction",
+                cells: ["Low", "High"]
+              },
+              {
+                header: "Healthcare Costs",
+                cells: ["$$$", "$"]
+              },
             ]}
           />
         </div>
-
-        <h3><mark>Current vs. Enhanced Pathway</mark></h3>
-        <Table
-          columns={["Current pathway", "Exonova-enhanced"]}
-          rows={[
-            {
-              header: "Diagnosis Time",
-              cells: ["6 to 12 years", "Weeks"]
-            },
-            {
-              header: "Surgery Rate",
-              cells: ["High", "Reduced"]
-            },
-            {
-              header: "Patient Satisfaction",
-              cells: ["Low", "High"]
-            },
-            {
-              header: "Healthcare Costs",
-              cells: ["$$$", "$"]
-            },
-          ]}
-        />
-      </div>
-    </section >
+      </section>
+    </>
   )
 }
 
