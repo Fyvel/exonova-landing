@@ -1,0 +1,178 @@
+.navbar {
+	--clickable-width: 33px;
+	--toggle-top: 3.5em;
+
+	position: fixed;
+	background-color: var(--color-bg-1);
+	height: 9em;
+	top: 0;
+	z-index: 9;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.navbar-bg {
+	position: fixed;
+	height: 9em;
+	inset: 0;
+	background: var(--color-bg-1);
+	color: var(--color-fg);
+}
+
+.brand {
+	position: fixed;
+	display: flex;
+	gap: 1em;
+	top: 2em;
+	left: 6%;
+	width: 70%;
+	align-items: center;
+}
+
+.title {
+	text-wrap: wrap;
+	font-size: max(2em, min(5vw + .3em, 4em));
+	line-height: 1.2;
+}
+
+.logo {
+	border: 1px solid var(--aero);
+	border-radius: 50%;
+	width: 5em;
+	height: auto;
+}
+
+/* full-screen invisible overlay that closes the menu when clicked */
+.overlay {
+	position: relative;
+	inset: 0;
+	background: transparent;
+	z-index: 0;
+	display: none;
+	width: calc(100vw - 250px);
+	height: 100vh;
+}
+
+.menu-toggle {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.menu-toggle a {
+	text-wrap: nowrap;
+	text-decoration: none;
+	color: #232323;
+	transition: color 0.3s ease;
+}
+
+.menu-toggle a:hover {
+	color: var(--rusty-red);
+	font-weight: 700;
+}
+
+.menu-toggle input {
+	display: block;
+	width: var(--clickable-width);
+	height: 32px;
+	position: absolute;
+	top: var(--toggle-top);
+	right: 90%;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 10;
+	-webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+.hamburger span {
+	background-color: var(--color-fg);
+	visibility: visible;
+	display: block;
+	top: var(--toggle-top);
+	right: 80%;
+	width: var(--clickable-width);
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	border-radius: 3px;
+	z-index: 10;
+	transform-origin: 4px 0;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		opacity 0.55s ease;
+}
+
+.hamburger span:first-child {
+	transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a cross */
+input:checked~.hamburger span {
+	opacity: 1;
+	transform: rotate(45deg) translate(0, -1px);
+	background: var(--black);
+}
+
+/* But let's hide the middle one. */
+input:checked~.hamburger span:nth-child(2) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* last one should go the other direction */
+input:checked~.hamburger span:nth-child(3) {
+	transform: rotate(-45deg) translate(-4px, -1px);
+}
+
+/* Make this absolute positioned at the top left of the screen */
+.menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	max-width: 250px;
+	height: 100vh;
+	padding: 50px;
+	padding-top: 125px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	background: var(--white);
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+
+	/* to stop flickering of text in safari */
+	transform-origin: 0% 0%;
+	transform: translateX(100%);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+/* And let's slide it in from the right */
+.menu-toggle input:checked~.menu {
+	transform: none;
+}
+
+.menu-toggle input:checked~.overlay {
+	position: absolute;
+	display: block;
+	transform: translateX(-100vw);
+	width: 100vw;
+}

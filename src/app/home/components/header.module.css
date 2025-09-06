@@ -1,8 +1,7 @@
 .hero {
 	color: var(--white, white);
 	padding: 12em 0;
-
-	/* background-color: var(--space-cadet, #333); */
+	top: 4em;
 }
 
 .hero-content {
