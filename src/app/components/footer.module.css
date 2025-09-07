@@ -13,7 +13,9 @@
 @media (width > 600px) {
 	.wrapper {
 		grid-template-areas:
-			"logo anchors socials legal";
+			"logo anchors socials";
+
+		/* "logo anchors socials legal"; */
 	}
 }
 

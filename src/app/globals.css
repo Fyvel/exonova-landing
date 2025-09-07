@@ -103,6 +103,9 @@ footer {
 
 section {
   padding: 7em 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 section h2 {
@@ -192,6 +195,7 @@ mark {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
   transition: all 0.5s;
   outline: none;
 }
@@ -206,4 +210,17 @@ mark {
 .btn:active {
   border-color: var(--btn-border);
   color: var(--btn-color);
+}
+
+.sr-only {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.outline-text {
+  text-shadow: 1px 1px 1px black;
 }

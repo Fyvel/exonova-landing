@@ -14,7 +14,7 @@ const anchors = [
 export default function Navbar() {
 	return (
 		<nav className={`${styles.navbar}`} role="navigation">
-			<div className={`${styles["navbar-bg"]}`} />
+			{/* <div className={`${styles["navbar-bg"]}`} /> */}
 
 			<a className={`container ${styles.brand}`} href="#">
 				<Image src="/logo.svg" alt="Exonova Logo" width={80} height={80} className={styles.logo} />
@@ -22,7 +22,7 @@ export default function Navbar() {
 			</a>
 
 			<div className={`${styles["menu-toggle"]}`}>
-				<input type="checkbox" id="menuCheckbox" className={styles["menu-checkbox"]} />
+				<input type="checkbox" id="menuCheckbox" className={styles["menu-checkbox"]} aria-label="Toggle navigation menu" />
 
 				<div className={styles.hamburger}>
 					<span></span>
@@ -30,7 +30,9 @@ export default function Navbar() {
 					<span></span>
 				</div>
 
-				<label htmlFor="menuCheckbox" className={styles.overlay} />
+				<label htmlFor="menuCheckbox" className={styles.overlay}>
+					<span className={"sr-only"}>Toggle navigation menu</span>
+				</label>
 
 				<ul className={`${styles.menu}`}>
 					{anchors.map(({ href, label }) => (

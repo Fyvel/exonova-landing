@@ -1,26 +1,45 @@
 .navbar {
 	--clickable-width: 33px;
-	--toggle-top: 3.5em;
+	--toggle-top: 2.8em;
+	--navbar-height: 6.5em;
+	--font-size: 1.4em;
+	--logo-size: 3em;
 
-	position: fixed;
+	position: sticky;
 	background-color: var(--color-bg-1);
-	height: 9em;
+	height: var(--navbar-height);
 	top: 0;
 	z-index: 9;
 }
+
+@media (width >=600px) {
+	.navbar {
+		--toggle-top: 3.5em;
+		--navbar-height: 8em;
+		--font-size: max(2em, min(5vw + .3em, 4em));
+		--logo-size: max(4em, min(5vw + .3em, 6em));
+	}
+}
+
+@media (width >=1100px) {
+	.navbar {
+		--navbar-height: 9.5em;
+	}
+}
+
 
 .navbar a {
 	text-decoration: none;
 	color: inherit;
 }
 
-.navbar-bg {
+/* .navbar-bg {
 	position: fixed;
-	height: 9em;
+	height: var(--navbar-height);
 	inset: 0;
 	background: var(--color-bg-1);
 	color: var(--color-fg);
-}
+} */
 
 .brand {
 	position: fixed;
@@ -34,14 +53,14 @@
 
 .title {
 	text-wrap: wrap;
-	font-size: max(2em, min(5vw + .3em, 4em));
+	font-size: var(--font-size);
 	line-height: 1.2;
 }
 
 .logo {
 	border: 1px solid var(--aero);
 	border-radius: 50%;
-	width: 5em;
+	width: var(--logo-size);
 	height: auto;
 }
 

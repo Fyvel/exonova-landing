@@ -8,10 +8,10 @@ export default function Contact() {
         <div className={`container spacing`}>
           <h2>Get in touch</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec libero tincidunt, a tincidunt libero tincidunt.
+            Whether you are a clinician or a partner eager to collaborate, we will be happy to hear from you.
           </p>
-          <a href="mailto:contact@exonova.com" className={`btn ${styles.cta}`}>
-            Get in touch
+          <a href="mailto:fanny.blaudez@exonova.com.au" className={`btn ${styles.cta}`}>
+            Email us
           </a>
         </div>
       </section>

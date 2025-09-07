@@ -15,7 +15,10 @@ export default function Header() {
             </p>
             <p className={styles["hero-quote"]}><i>Because women have waited long enough for better answers.</i></p>
           </div>
-          <button className={`btn ${styles["cta-button"]}`}>Call To Action</button>
+          <br />
+          <a href="mailto:fanny.blaudez@exonova.com.au" className={`btn ${styles.cta}`}>
+            Contact us
+          </a>
         </div>
       </header >
     </>

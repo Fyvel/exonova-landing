@@ -1,7 +1,17 @@
 .solution {
-	padding: 12em 0 4em;
 	background-color: var(--color-bg-1-alt);
 	color: var(--color-fg-alt);
+}
+
+.solution h3 mark {
+	color: inherit;
+	background: linear-gradient(to top,
+			var(--color-primary) 0%,
+			var(--color-primary) 100%);
+	background-color: inherit;
+	background-repeat: no-repeat;
+	background-size: 0% 0.1em;
+	background-position: left bottom;
 }
 
 .list {

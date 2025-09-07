@@ -10,7 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Exonova Biotech",
+  title: "EXONOVA Biotech",
   description: "Revolutionising endometriosis diagnosis through innovative technology.",
 };
 

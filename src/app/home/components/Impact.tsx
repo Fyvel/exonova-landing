@@ -7,7 +7,7 @@ export default function Impact() {
       <div className={`parallax-image parallax-image-impact parallax-sticky`} />
       <section className={`parallax-section ${styles.impact}`} id={"impact"}>
         <div className={`container spacing`}>
-          <h2>
+          <h2 className={"outline-text"}>
             Better for Women,<br />
             Smarter for Clinicians &<br />
             Cheaper for Everyone.
@@ -41,12 +41,12 @@ export default function Impact() {
                 "Reduced surgical load",
                 "Optimised resources",
                 "Lower costs",
-                "Better allocation"
+                "Patient prioritisation"
               ]}
             />
           </div>
 
-          <h3><mark>Current vs. Enhanced Pathway</mark></h3>
+          <h3 className={"outline-text"}><mark>Current vs. Enhanced Pathway</mark></h3>
           <Table
             columns={["Current pathway", "Exonova-enhanced"]}
             rows={[

@@ -5,19 +5,19 @@ const events = [
   {
     phase: 1,
     title: "Diagnosis",
-    description: "Highly accurate & rapid diagnosis to empower doctors in helping these women",
+    description: "Deliver highly accurate and rapid results to empower doctors in providing better care for women",
     icon: "/phase-1.svg"
   },
   {
     phase: 2,
     title: "Research & Development",
-    description: "Focused on innovative solutions and clinical trials",
+    description: "Advance the understanding of endometriosis to unlock new diagnostic and treatment opportunities",
     icon: "/phase-2.svg"
   },
   {
     phase: 3,
     title: "Personalised Treatment",
-    description: "Tailored therapies based on individual patient profiles",
+    description: "Develop tailored therapies based on individual patient profiles",
     icon: "/phase-3.svg"
   }
 ]

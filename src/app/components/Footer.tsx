@@ -6,7 +6,7 @@ const anchors = [
   { href: `#solution`, label: "Solution" },
   { href: `#impact`, label: "Impact" },
   { href: `#roadmap`, label: "Roadmap" },
-  { href: `#faq`, label: "FAQ" },
+  // { href: `#faq`, label: "FAQ" },
   { href: `#contact`, label: "Contact" },
 ];
 
@@ -37,12 +37,12 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/exonova-biotech/" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:contact@exonova.com`}>
+            <a href={`mailto:fanny.blaudez@exonova.com.au`}>
               Email
             </a>
           </div>
 
-          <div className={styles.legal}>
+          {/* <div className={styles.legal}>
             <h3>Legal</h3>
             <a href="" target="_blank" rel="noopener noreferrer">
               Terms and Conditions
@@ -50,7 +50,7 @@ export default function Footer() {
             <a href="" target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
