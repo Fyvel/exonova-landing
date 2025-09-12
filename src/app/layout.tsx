@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
-import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import "./parallax.css";
+import { ClientProviders } from "@/components/ClientProviders";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head></head>
       <body className={`${notoSansJP.variable}`}>
-        <ThemeProvider attribute="data-theme" defaultTheme="light">
+        <ClientProviders>
           {children}
-        </ThemeProvider>
+        </ClientProviders>
       </body>
     </html>
   );
