@@ -1,31 +1,31 @@
-import styles from './roadmap.module.css';
-import Image from 'next/image';
+import styles from "./roadmap.module.css"
+import Image from "next/image"
 
 const events = [
   {
     phase: 1,
     title: "Diagnosis",
     description: "Deliver highly accurate and rapid results to empower doctors in providing better care for women",
-    icon: "/phase-1.svg"
+    icon: "/phase-1.svg",
   },
   {
     phase: 2,
     title: "Research & Development",
     description: "Advance the understanding of endometriosis to unlock new diagnostic and treatment opportunities",
-    icon: "/phase-2.svg"
+    icon: "/phase-2.svg",
   },
   {
     phase: 3,
     title: "Personalised Treatment",
     description: "Develop tailored therapies based on individual patient profiles",
-    icon: "/phase-3.svg"
-  }
+    icon: "/phase-3.svg",
+  },
 ]
 
 export default function Roadmap() {
   return (
     <section className={`parallax-section ${styles.roadmap}`} id="roadmap">
-      <div className={`container spacing`}>
+      <div className={"container spacing"}>
         <h2>Our Vision</h2>
         <div className={styles.timeline}>
           {events.map(event => (

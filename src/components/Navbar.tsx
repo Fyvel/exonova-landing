@@ -1,18 +1,18 @@
-import Image from "next/image";
-import styles from './navbar.module.css'
+import Image from "next/image"
+import styles from "./navbar.module.css"
 
 const anchors = [
-	{ href: `#`, label: "Home" },
-	{ href: `#problem`, label: "Current Problem" },
-	{ href: `#solution`, label: "Our Solution" },
-	{ href: `#impact`, label: "Impact" },
-	{ href: `#roadmap`, label: "Our vision" },
-	// { href: `#faq`, label: "Frequently asked questions" },
-	{ href: `#contact`, label: "Contact Us" },
-];
+  { href: "#", label: "Home" },
+  { href: "#problem", label: "Current Problem" },
+  { href: "#solution", label: "Our Solution" },
+  { href: "#impact", label: "Impact" },
+  { href: "#roadmap", label: "Our vision" },
+  // { href: `#faq`, label: "Frequently asked questions" },
+  { href: "#contact", label: "Contact Us" },
+]
 
 export default function Navbar() {
-	return (
+  return (
 		<nav className={`${styles.navbar}`} role="navigation">
 			{/* <div className={`${styles["navbar-bg"]}`} /> */}
 
@@ -43,5 +43,5 @@ export default function Navbar() {
 				</ul>
 			</div>
 		</nav>
-	)
+  )
 }

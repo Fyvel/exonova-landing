@@ -1,12 +1,12 @@
-import styles from "./header.module.css";
+import styles from "./header.module.css"
 
 export default function Header() {
   return (
     <>
-      <div className={`parallax-image parallax-image-hero parallax-sticky`} />
+      <div className={"parallax-image parallax-image-hero parallax-sticky"} />
       <header className={`parallax-section ${styles.hero}`} id="hero">
         <div className={`container ${styles["hero-content"]}`}>
-          <div className={`spacing`}>
+          <div className={"spacing"}>
             <h1 className={styles["hero-title"]}>
               Revolutionising Endometriosis Diagnosis
             </h1>
@@ -22,5 +22,5 @@ export default function Header() {
         </div>
       </header >
     </>
-  );
+  )
 }

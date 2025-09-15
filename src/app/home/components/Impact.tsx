@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import styles from './impact.module.css';
+import Image from "next/image"
+import styles from "./impact.module.css"
 
 export default function Impact() {
   return (
     <>
-      <div className={`parallax-image parallax-image-impact parallax-sticky`} />
+      <div className={"parallax-image parallax-image-impact parallax-sticky"} />
       <section className={`parallax-section ${styles.impact}`} id={"impact"}>
-        <div className={`container spacing`}>
+        <div className={"container spacing"}>
           <h2 className={"outline-text"}>
             Better for Women,<br />
             Smarter for Clinicians &<br />
@@ -21,7 +21,7 @@ export default function Impact() {
                 "Shorter diagnostic time",
                 "Fewer unnecessary surgeries",
                 "More informed choices",
-                "Reduced suffering"
+                "Reduced suffering",
               ]}
             />
             <Card
@@ -31,7 +31,7 @@ export default function Impact() {
                 "Clearer patient triage",
                 "Objective results",
                 "Enhanced decision-making",
-                "Improved patient outcomes"
+                "Improved patient outcomes",
               ]}
             />
             <Card
@@ -41,7 +41,7 @@ export default function Impact() {
                 "Reduced surgical load",
                 "Optimised resources",
                 "Lower costs",
-                "Patient prioritisation"
+                "Patient prioritisation",
               ]}
             />
           </div>
@@ -52,19 +52,19 @@ export default function Impact() {
             rows={[
               {
                 header: "Diagnosis Time",
-                cells: ["6 to 12 years", "Weeks"]
+                cells: ["6 to 12 years", "Weeks"],
               },
               {
                 header: "Surgery Rate",
-                cells: ["High", "Reduced"]
+                cells: ["High", "Reduced"],
               },
               {
                 header: "Patient Satisfaction",
-                cells: ["Low", "High"]
+                cells: ["Low", "High"],
               },
               {
                 header: "Healthcare Costs",
-                cells: ["$$$", "$"]
+                cells: ["$$$", "$"],
               },
             ]}
           />

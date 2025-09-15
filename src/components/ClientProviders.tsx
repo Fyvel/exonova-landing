@@ -1,12 +1,12 @@
-'use client';
+"use client"
 
-import { ThemeProvider } from 'next-themes';
-import React, { ReactNode } from 'react'
+import { ThemeProvider } from "next-themes"
+import React, { ReactNode } from "react"
 
 export function ClientProviders({ children }: { children: ReactNode }) {
-	return (
+  return (
 		<ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
 			{children}
 		</ThemeProvider>
-	);
+  )
 }

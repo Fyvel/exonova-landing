@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
-import "./globals.css";
-import "./parallax.css";
-import { ClientProviders } from "@/components/ClientProviders";
+import type { Metadata } from "next"
+import { Noto_Sans_JP } from "next/font/google"
+import "./globals.css"
+import "./parallax.css"
+import { ClientProviders } from "@/components/ClientProviders"
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "EXONOVA Biotech",
   description: "Revolutionising endometriosis diagnosis through innovative technology.",
-};
+}
 
 export default function RootLayout({
   children,
@@ -28,5 +28,5 @@ export default function RootLayout({
         </ClientProviders>
       </body>
     </html>
-  );
+  )
 }

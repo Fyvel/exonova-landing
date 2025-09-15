@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import styles from './problem.module.css';
+import Image from "next/image"
+import styles from "./problem.module.css"
 
 export default function Problem() {
   return (
     <section className={`parallax-section ${styles.problem}`} id="problem">
-      <div className={`container spacing`}>
-        <div className={`spacing`}>
+      <div className={"container spacing"}>
+        <div className={"spacing"}>
           <h2>Endometriosis Diagnosis is Broken</h2>
           <p>
             Current methods are invasive, costly, and unreliable.<br />
@@ -39,7 +39,7 @@ export default function Problem() {
         </ul>
       </div>
     </section>
-  );
+  )
 }
 
 type CardProps = {

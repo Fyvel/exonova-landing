@@ -1,12 +1,12 @@
-import styles from './solution.module.css';
-import Image from 'next/image';
+import styles from "./solution.module.css"
+import Image from "next/image"
 
 export default function Solution() {
   return (
     <>
       <section className={`parallax-section ${styles.solution}`} id="solution">
-        <div className={`container spacing`}>
-          <div className={`spacing`}>
+        <div className={"container spacing"}>
+          <div className={"spacing"}>
             <h2>A New Era in Endometriosis Diagnosis</h2>
             <p>
               EXONOVA Biotech is developing a non-invasive blood-based test powered by advanced biomarkers.
@@ -51,7 +51,7 @@ export default function Solution() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
 function Arrow() {

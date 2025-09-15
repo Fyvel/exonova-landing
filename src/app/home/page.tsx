@@ -1,10 +1,10 @@
-import Header from "./components/Header";
-import Problem from "./components/Problem";
-import Solution from "./components/Solution";
-import Impact from "./components/Impact";
-import Roadmap from "./components/Roadmap";
+import Header from "./components/Header"
+import Problem from "./components/Problem"
+import Solution from "./components/Solution"
+import Impact from "./components/Impact"
+import Roadmap from "./components/Roadmap"
 // import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact"
 
 export default function Home() {
   return (
@@ -19,5 +19,5 @@ export default function Home() {
         <Contact />
       </div>
     </div>
-  );
+  )
 }

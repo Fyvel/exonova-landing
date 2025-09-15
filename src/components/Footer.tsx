@@ -1,14 +1,14 @@
-import Image from "next/image";
+import Image from "next/image"
 import styles from "./footer.module.css"
 
 const anchors = [
-  { href: `#problem`, label: "Problem" },
-  { href: `#solution`, label: "Solution" },
-  { href: `#impact`, label: "Impact" },
-  { href: `#roadmap`, label: "Roadmap" },
+  { href: "#problem", label: "Problem" },
+  { href: "#solution", label: "Solution" },
+  { href: "#impact", label: "Impact" },
+  { href: "#roadmap", label: "Roadmap" },
   // { href: `#faq`, label: "FAQ" },
-  { href: `#contact`, label: "Contact" },
-];
+  { href: "#contact", label: "Contact" },
+]
 
 export default function Footer() {
   return (
@@ -37,7 +37,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/exonova-biotech/" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:fanny.blaudez@exonova.com.au`}>
+            <a href={"mailto:fanny.blaudez@exonova.com.au"}>
               Email
             </a>
           </div>
@@ -56,5 +56,5 @@ export default function Footer() {
 
       <p className={styles.copyright}>© 2025 EXONOVA Biotech. All rights reserved.</p>
     </footer>
-  );
+  )
 }
