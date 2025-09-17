@@ -37,6 +37,7 @@ div.parallax-image {
 div.parallax-image-hero {
 	background-image: url("/hero-banner.webp"),
 		linear-gradient(135deg, var(--aero), var(--rusty-red-300));
+	top: 6.5em;
 }
 
 div.parallax-image-impact {

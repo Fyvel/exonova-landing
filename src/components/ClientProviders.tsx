@@ -5,8 +5,8 @@ import React, { ReactNode } from "react"
 
 export function ClientProviders({ children }: { children: ReactNode }) {
   return (
-		<ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
-			{children}
-		</ThemeProvider>
+    <ThemeProvider attribute="data-theme" enableSystem>
+      {children}
+    </ThemeProvider>
   )
 }
