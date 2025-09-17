@@ -2,6 +2,17 @@
   html {
     color-scheme: dark;
   }
+
+  :root[data-theme="dark"] {
+    --color-primary: var(--aero);
+    --color-accent: var(--rusty-red);
+    --color-fg: var(--white);
+    --color-fg-alt: var(--black);
+    --color-bg-1: var(--space-cadet);
+    --color-bg-1-alt: var(--aero-50);
+    --color-bg-2: var(--rusty-red-900);
+    --color-bg-2-alt: var(--rusty-red-50);
+  }
 }
 
 @font-face {
@@ -49,17 +60,6 @@
   --color-bg-1-alt: var(--space-cadet);
   --color-bg-2: var(--rusty-red-50);
   --color-bg-2-alt: var(--rusty-red-900);
-}
-
-:root[data-theme="dark"] {
-  --color-primary: var(--aero);
-  --color-accent: var(--rusty-red);
-  --color-fg: var(--white);
-  --color-fg-alt: var(--black);
-  --color-bg-1: var(--space-cadet);
-  --color-bg-1-alt: var(--aero-50);
-  --color-bg-2: var(--rusty-red-900);
-  --color-bg-2-alt: var(--rusty-red-50);
 }
 
 *,
