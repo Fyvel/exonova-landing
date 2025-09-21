@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google"
 import "./globals.css"
 import "./parallax.css"
 import { ClientProviders } from "@/components/ClientProviders"
+import { SEO } from "@/components/SEO"
 import { PWA } from "@/components/PWA"
 
 const notoSansJP = Noto_Sans_JP({
@@ -74,9 +75,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+  const bingVerification = process.env.NEXT_PUBLIC_BING_VERIFICATION
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <SEO
+          googleVerification={googleVerification}
+          bingVerification={bingVerification}
+          gaId={gaId}
+        />
         <PWA />
       </head>
       <body className={`${notoSansJP.variable}`}>
