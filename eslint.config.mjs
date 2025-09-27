@@ -34,7 +34,7 @@ const config = [
         "warn",
         {
           allowConstantExport: true,
-          allowExportNames: ["metadata"],
+          allowExportNames: ["metadata", "generateMetadata"],
         },
       ],
       // Syntax consistency rules

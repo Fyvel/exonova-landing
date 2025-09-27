@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: false,
   exclude: ["/admin/*", "/api/*"],
   generateIndexSitemap: false,
-  outDir: "./public",
+  outDir: "./public/sitemaps-global",
   additionalPaths: async (config) => [
     await config.transform(config, "/"),
     await config.transform(config, "/#problem"),
