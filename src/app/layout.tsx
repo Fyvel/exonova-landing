@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: "/",
+      canonical: canonicalUrl,
       languages: {
         "en-AU": "https://www.exonova.com.au",
         "en": "https://www.exonova-biotech.com",

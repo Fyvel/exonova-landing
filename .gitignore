@@ -3,9 +3,5 @@ node_modules
 .next
 out*
 
-# Sitemap files (auto-generated)
-public/sitemap*.xml
-public/sitemaps-*/
-
 .env
 .env.local
