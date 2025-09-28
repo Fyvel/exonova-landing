@@ -1,12 +1,12 @@
-export const dynamic = "force-static"
+export const dynamic = "force-dynamic"
 
 export async function GET(request: Request) {
-  const host = request.headers.get("host") || "exonova-biotech.com"
+  const host = request.headers.get("host") || "www.exonova-biotech.com"
 
   const isAuDomain = host.includes(".com.au")
   const sitemapUrl = isAuDomain
-    ? `https://www.${host}/sitemap-au.xml`
-    : `https://www.${host}/sitemap-global.xml`
+    ? `https://${host}/sitemap-au.xml`
+    : `https://${host}/sitemap-global.xml`
 
   const robots = `
     User-agent: *
